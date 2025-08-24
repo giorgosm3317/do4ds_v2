@@ -13,3 +13,10 @@ This project follows the labs from the [*DevOps for Data Science*](https://do4ds
     -   Updated the project .Rprofile so that R uses the Python interpreter from the project’s `.venv` virtual environment through `reticulate`.
 4.  **Add EDA and model files**
     -   Added `model.qmd` and `eda.qmd` files.
+
+## Lab02
+
+1.  **Create and Save a Vetiver Model**
+    -   Converted the trained model into a Vetiver model object and stored it in a local folder board.
+2.  **Create a Vetiver API**
+    -   Built a Python API (`app.py`) for the Vetiver model that reads the latest version from the board and exposes it for serving predictions.

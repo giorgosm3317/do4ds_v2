@@ -1,0 +1,144 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Model\"\n",
+        "format:\n",
+        "  html:\n",
+        "    code-fold: true\n",
+        "---"
+      ],
+      "id": "032a8753"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from palmerpenguins import penguins\n",
+        "from pandas import get_dummies\n",
+        "import numpy as np\n",
+        "from sklearn.linear_model import LinearRegression\n",
+        "from sklearn import preprocessing"
+      ],
+      "id": "da7a5794",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Get Data"
+      ],
+      "id": "e9b56ff5"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "df = penguins.load_penguins().dropna()\n",
+        "\n",
+        "df.head(3)"
+      ],
+      "id": "74824bc6",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Define Model and Fit"
+      ],
+      "id": "6948c8bb"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "X = get_dummies(df[['bill_length_mm', 'species', 'sex']], drop_first = True)\n",
+        "y = df['body_mass_g']\n",
+        "\n",
+        "model = LinearRegression().fit(X, y)"
+      ],
+      "id": "5257da4b",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Get some information"
+      ],
+      "id": "7d060530"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "print(f\"R^2 {model.score(X,y)}\")\n",
+        "print(f\"Intercept {model.intercept_}\")\n",
+        "print(f\"Columns {X.columns}\")\n",
+        "print(f\"Coefficients {model.coef_}\")"
+      ],
+      "id": "468187c3",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Turn into Vetiver Model"
+      ],
+      "id": "07ba557d"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from vetiver import VetiverModel\n",
+        "v = VetiverModel(model, model_name='penguin_model', prototype_data=X)"
+      ],
+      "id": "64509b3e",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Save to Board"
+      ],
+      "id": "6ba907b9"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from pins import board_folder\n",
+        "from vetiver import vetiver_pin_write\n",
+        "\n",
+        "model_board = board_folder(\"./data/model\", allow_pickle_read = True)\n",
+        "vetiver_pin_write(model_board, v)"
+      ],
+      "id": "12ad05e1",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "C:\\Users\\giorg\\Desktop\\do4ds_v2\\.venv\\share\\jupyter\\kernels\\python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
