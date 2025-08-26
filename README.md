@@ -19,4 +19,13 @@ This project follows the labs from the [*DevOps for Data Science*](https://do4ds
 1.  **Create and Save a Vetiver Model**
     -   Converted the trained model into a Vetiver model object and stored it in a local folder board.
 2.  **Create a Vetiver API**
-    -   Built a Python API (`app.py`) for the Vetiver model that reads the latest version from the board and exposes it for serving predictions.
+    -   Built a Python API (`api.py`) for the Vetiver model that reads the latest version from the board and exposes it for serving predictions.
+
+## Lab03
+
+1.  **Move Data to DuckDB**
+    -   Stored the project data in a local DuckDB database (`my-db.duckdb`).
+2.  **Update EDA and Model Scripts**
+    -   Modified `eda.qmd` and `model.qmd` to read data directly from DuckDB.
+3.  **Create Shiny Apps**
+    -   Built Shiny apps in both R (`app-api.R`) and Python (`app-api.py`).
