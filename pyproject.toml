@@ -13,5 +13,6 @@ dependencies = [
     "quarto>=0.1.0",
     "scikit-learn>=1.7.1",
     "setuptools>=80.9.0",
+    "shiny>=1.4.0",
     "vetiver>=0.2.6",
 ]
