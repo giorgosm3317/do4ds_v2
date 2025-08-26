@@ -29,3 +29,10 @@ This project follows the labs from the [*DevOps for Data Science*](https://do4ds
     -   Modified `eda.qmd` and `model.qmd` to read data directly from DuckDB.
 3.  **Create Shiny Apps**
     -   Built Shiny apps in both R (`app-api.R`) and Python (`app-api.py`).
+    
+## Lab04
+
+1. **Add Logging to Shiny Apps**
+   - Integrated logging into the R Shiny app using the [`log4r`](https://cran.r-project.org/package=log4r) package.
+   - Integrated logging into the Python Shiny app using the built-in [`logging`](https://docs.python.org/3/library/logging.html) module.
+
