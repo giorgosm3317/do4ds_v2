@@ -1,5 +1,22 @@
 project:
-  title: "do4ds_v2"
+  type: website
 
-editor: visual
+website:
+  title: "Project - do4ds"
+  navbar:
+    left:
+      - href: eda-basic.qmd
+        text: EDA
+      - href: model.qmd
+        text: Modeling
 
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+    
+execute:
+  freeze: false
