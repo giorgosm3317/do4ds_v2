@@ -15,4 +15,5 @@ wheels/
 .venv
 
 
-/.quarto/
+.quarto/
+_site/
