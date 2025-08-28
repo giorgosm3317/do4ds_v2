@@ -5,6 +5,8 @@ website:
   title: "Project - do4ds"
   navbar:
     left:
+      - href: index.qmd
+        text: Home
       - href: eda-basic.qmd
         text: EDA
       - href: model.qmd

@@ -1,0 +1,10 @@
+---
+title: "Penguin Project"
+---
+
+# Welcome
+
+This site contains analysis and modeling of the Palmer Penguins dataset.
+
+-   [Exploratory Data Analysis](eda.qmd)
+-   [Model Building](model.qmd)
