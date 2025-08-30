@@ -53,7 +53,7 @@
     "href": "model.html#write-to-s3",
     "title": "Model",
     "section": "Write to S3",
-    "text": "Write to S3\n\n\nCode\nfrom pins import board_s3\nfrom vetiver import vetiver_pin_write\n\nboard = board_s3(\"do4ds-lab-gm\", allow_pickle_read=True)\nvetiver_pin_write(board, v)\n\n\nModel Cards provide a framework for transparent, responsible reporting. \n Use the vetiver `.qmd` Quarto template as a place to start, \n with vetiver.model_card()\nWriting pin:\nName: 'penguin_model'\nVersion: 20250830T151321Z-49eca"
+    "text": "Write to S3\n\n\nCode\nfrom pins import board_s3\nfrom vetiver import vetiver_pin_write\n\nboard = board_s3(\"do4ds-lab-gm\", allow_pickle_read=True)\nvetiver_pin_write(board, v)\n\n\nModel Cards provide a framework for transparent, responsible reporting. \n Use the vetiver `.qmd` Quarto template as a place to start, \n with vetiver.model_card()\n('The hash of pin \"penguin_model\" has not changed. Your pin will not be stored.',)"
   },
   {
     "objectID": "index.html",
