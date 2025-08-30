@@ -18,3 +18,5 @@ wheels/
 .quarto/
 _site/
 /.quarto/
+
+.env

@@ -45,3 +45,9 @@ This project follows the labs from the [*DevOps for Data Science*](https://do4ds
     -   [Publishing with GitHub Pages (Quarto Docs)](https://quarto.org/docs/publishing/github-pages.html#github-action)
     -   [GitHub Integration with `uv`](https://docs.astral.sh/uv/guides/integration/github/)
     -   [Quarto GitHub Actions](https://github.com/quarto-dev/quarto-actions/tree/main)
+
+## Lab 06
+
+
+https://b-rodrigues.github.io/rap4mads_2024/09-docker.html
+https://docs.astral.sh/uv/guides/integration/docker/#intermediate-layers
