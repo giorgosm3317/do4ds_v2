@@ -48,11 +48,27 @@ v = VetiverModel(model, model_name='penguin_model', prototype_data=X)
 ## Save to Board
 
 ```{python}
-from pins import board_folder
-from vetiver import vetiver_pin_write
-
-model_board = board_folder("./data/model", allow_pickle_read = True)
-vetiver_pin_write(model_board, v)
+# from pins import board_folder
+# from vetiver import vetiver_pin_write
+# 
+# model_board = board_folder("./data/model", allow_pickle_read = True)
+# vetiver_pin_write(model_board, v)
 ```
 
+## Load Envirionment 
 
+```{python}
+from dotenv import load_dotenv
+
+load_dotenv()
+```
+
+## Write to S3
+
+```{python}
+from pins import board_s3
+from vetiver import vetiver_pin_write
+
+board = board_s3("do4ds-lab-gm", allow_pickle_read=True)
+vetiver_pin_write(board, v)
+```
